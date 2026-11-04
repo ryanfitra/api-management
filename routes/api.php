@@ -211,6 +211,9 @@ Route::middleware(['auth:sanctum', 'check.api.access'])->group(function () {
         Route::get('sister-list-tugas-tambahan', [SatuDataController::class, 'get_sister_list_tugas_tambahan'])->name('api.referensi.sister-list-tugas-tambahan');
         Route::get('sister-list-tunjangan', [SatuDataController::class, 'get_sister_list_tunjangan'])->name('api.referensi.sister-list-tunjangan');
         Route::get('sister-list-visiting-scientist', [SatuDataController::class, 'get_sister_list_visiting_scientist'])->name('api.referensi.sister-list-visiting-scientist');
+        Route::get('sister-list-bkd-penelitian', [SatuDataController::class, 'get_sister_list_bkd_penelitian'])->name('api.referensi.sister-list-bkd-penelitian');
+        Route::get('sister-list-bkd-pengabdian', [SatuDataController::class, 'get_sister_list_bkd_pengabdian'])->name('api.referensi.sister-list-bkd-pengabdian');
+        Route::get('sister-list-bkd-penunjang', [SatuDataController::class, 'get_sister_list_bkd_penunjang'])->name('api.referensi.sister-list-bkd-penunjang');
 
 
     //PERKULIAHAN
