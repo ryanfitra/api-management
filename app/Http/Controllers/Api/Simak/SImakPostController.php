@@ -23,6 +23,8 @@ class SimakPostController extends Controller
         // 1. Validasi Input sesuai dengan fleksibilitas payload SIMAK & SIMKATMAWA
         $validator = Validator::make($request->all(), [
             'id_prestasi'          => 'required|string',
+            'id_mahasiswa'         => 'required|string',
+            'id_aktivitas'         => 'required|string',
             'nim'                  => 'required|string|max:20',
             'nama_mahasiswa'       => 'required|string',
             'nama_prestasi'        => 'required|string',
@@ -73,6 +75,8 @@ class SimakPostController extends Controller
             // 3. Menyiapkan array data yang akan dimasukkan
             $dataToInsert = [
                 'id_prestasi'          => $request->id_prestasi,
+                'id_mahasiswa'          => $request->id_mahasiswa,
+                'id_aktivitas'          => $request->id_aktivitas,
                 'nim'                  => $request->nim,
                 'nama_mahasiswa'       => $request->nama_mahasiswa,
                 'nama_prestasi'        => $request->nama_prestasi,
