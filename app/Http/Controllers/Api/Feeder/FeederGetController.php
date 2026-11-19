@@ -50,7 +50,9 @@ class FeederGetController extends Controller
                         'lam.nama_jenis_aktivitas',
                         'lam.judul',
                         'lam.id_semester',
-                        'lam.nama_semester'
+                        'lam.nama_semester',
+                        'lam.sk_tugas',
+                        'lam.tanggal_sk_tugas'
                     )
                     ->whereIn('lam.id_semester', $semesters)
                     ->whereIn('lam.id_jenis_aktivitas', $jenisAktivitas);
